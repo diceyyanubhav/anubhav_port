@@ -765,10 +765,10 @@
         }
         
         .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
+            display: block;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .about-text h3 {
@@ -1152,17 +1152,6 @@
                     <p>My expertise spans across video production, content strategy, and brand communication, helping businesses connect authentically with their audiences across all digital platforms.</p>
                     <p>I believe in the power of storytelling to drive meaningful engagement and measurable results for every project I undertake.</p>
                 </div>
-                <div class="about-media">
-                    <div class="showreel-container">
-                        <video id="showreel" muted poster="image/Cover 2.png">
-                            <source src="Final Showreel.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="showreel-overlay">
-                            <h4>CREATIVE SHOWREEL 2024</h4>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1452,19 +1441,19 @@
             }
         });
         
-        // Auto-play showreel on scroll
-        const showreel = document.getElementById('showreel');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    showreel.play();
-                } else {
-                    showreel.pause();
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        observer.observe(showreel);
+        // Auto-play showreel on scroll - REMOVED
+        // const showreel = document.getElementById('showreel');
+        // const observer = new IntersectionObserver((entries) => {
+        //     entries.forEach(entry => {
+        //         if (entry.isIntersecting) {
+        //             showreel.play();
+        //         } else {
+        //             showreel.pause();
+        //         }
+        //     });
+        // }, { threshold: 0.5 });
+        // 
+        // observer.observe(showreel);
     </script>
 </body>
 </html>
